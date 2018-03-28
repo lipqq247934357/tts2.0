@@ -1,0 +1,170 @@
+{
+  "interval": "3<em>年</em>210<em>天</em>",
+  "sumInterest": "14<em>亿</em>2612<em>万</em>4573.19<em>元</em>",
+  "data": {
+    "invest": 510275.75,
+    "projectPeriod": [
+      {
+        "periodGroup": "45天",
+        "periodAmount": 6920000,
+        "y": 0.001,
+        "periodType": 45
+      },
+      {
+        "periodGroup": "90天",
+        "periodAmount": 790610157,
+        "y": 0.067,
+        "periodType": 90
+      },
+      {
+        "periodGroup": "180天",
+        "periodAmount": 1030295000,
+        "y": 0.088,
+        "periodType": 180
+      },
+      {
+        "periodGroup": "360天",
+        "periodAmount": 9901600000,
+        "y": 0.844,
+        "periodType": 360
+      }
+    ],
+    "investProvince": [
+      {
+        "province": "北京",
+        "provinceCount": 271,
+        "y": 0.863
+      },
+      {
+        "province": "局域网",
+        "provinceCount": 28,
+        "y": 0.089
+      },
+      {
+        "province": "本机地址",
+        "provinceCount": 11,
+        "y": 0.035
+      },
+      {
+        "province": "吉林",
+        "provinceCount": 2,
+        "y": 0.006
+      },
+      {
+        "province": "天津",
+        "provinceCount": 2,
+        "y": 0.006
+      }
+    ],
+    "repay": 0,
+    "monthInvest": [
+      {
+        "date": "11月",
+        "invest": 260310,
+        "d": 201611
+      },
+      {
+        "date": "2月",
+        "invest": 8126996.34,
+        "d": 201702
+      },
+      {
+        "date": "3月",
+        "invest": 4381305,
+        "d": 201703
+      },
+      {
+        "date": "4月",
+        "invest": 2416617,
+        "d": 201704
+      },
+      {
+        "date": "5月",
+        "invest": 3604946.99,
+        "d": 201705
+      },
+      {
+        "date": "6月",
+        "invest": 5816489.84,
+        "d": 201706
+      },
+      {
+        "date": "7月",
+        "invest": 1205177.04,
+        "d": 201707
+      },
+      {
+        "date": "8月",
+        "invest": 3296890.03
+      }
+    ],
+    "investAge": [
+      {
+        "y": 0.33,
+        "ageCount": 93,
+        "ageGroup": "90后"
+      },
+      {
+        "y": 0.482,
+        "ageCount": 136,
+        "ageGroup": "80后"
+      },
+      {
+        "y": 0.071,
+        "ageCount": 20,
+        "ageGroup": "70后"
+      },
+      {
+        "y": 0.011,
+        "ageCount": 3,
+        "ageGroup": "60后"
+      },
+      {
+        "y": 0.106,
+        "ageCount": 30,
+        "ageGroup": "其他"
+      }
+    ],
+    "investAmount": [
+      {
+        "y": 0.432,
+        "amountGroup": "1w以下",
+        "amountCount": 117
+      },
+      {
+        "y": 0.203,
+        "amountGroup": "1w-5w",
+        "amountCount": 55
+      },
+      {
+        "y": 0.207,
+        "amountGroup": "5w-20w",
+        "amountCount": 56
+      },
+      {
+        "y": 0.077,
+        "amountGroup": "20w-50w",
+        "amountCount": 21
+      },
+      {
+        "y": 0.081,
+        "amountGroup": "50w以上",
+        "amountCount": 22
+      }
+    ],
+    "date": 20170829,
+    "oughtRepay": 0,
+    "sexRate": 58.279998779296875
+  },
+  "code": 200,
+  "msg": "succ",
+  "sexRate": 58.279998779296875,
+  "yes": 20170829000000000,
+  "averageAmt": "33<em>万</em>6942<em>元</em>",
+  "femalRate": 41.720001220703125,
+  "registCount": "453<em>人</em>",
+  "customerPath": "https://www.twotiger.com",
+  "device": 0,
+  "sumAmount": "1<em>亿</em>5263<em>万</em>4502.00<em>元</em>",
+  "collect": "6549<em>万</em>1036.48<em>元</em>"
+}
