@@ -45,7 +45,7 @@
     })
     export default class Home extends Vue {
 
-        value1: Date = new Date();
+        value1: Date = (function(){let data = new Date(new Date().toLocaleDateString()); data.setHours(8,0,0,0); return data})();
         value2: Date | null = window.localStorage.getItem('endTime') ? new Date(String(window.localStorage.getItem('endTime'))) : null; //
         amount: string | null = window.localStorage.getItem('amount');
 
@@ -63,6 +63,8 @@
 
             let val1 = new Date(this.value1);
             let val2 = new Date(this.value2);
+            console.log(this.value1);
+            console.log(this.value2);
             let date = (Number(val2) - Number(val1)) / (1000 * 60 * 60 * 24);
 
             window.localStorage.setItem('endTime', String(this.value2));
