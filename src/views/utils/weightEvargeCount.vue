@@ -1,6 +1,10 @@
 <template>
     <div class="cotent-margin-adsdfgh">
 
+        <div style="text-align: center; width: 340px;margin-bottom: 24px;">
+            每日减重计算器
+        </div>
+
         开始时间：
         <el-date-picker
                 placeholder="开始日期(默认今天)"
@@ -22,13 +26,12 @@
         <br>
         <br>
         从多少到多少(斤)：
-        <el-input placeholder="eg:xx-xx" style="width: 200px" v-model="amount"></el-input>
+        <el-input placeholder="eg:xx-xx" style="width: 162px" v-model="amount"></el-input>
         <br>
         <br>
-
-        <el-button @click="getVal">求值</el-button>
-
-
+        <div style="text-align: center;margin-top: 20px; width: 340px;">
+            <el-button @click="getVal">求值</el-button>
+        </div>
     </div>
 </template>
 <script lang="ts">
@@ -63,8 +66,6 @@
 
             let val1 = new Date(this.value1);
             let val2 = new Date(this.value2);
-            console.log(this.value1);
-            console.log(this.value2);
             let date = (Number(val2) - Number(val1)) / (1000 * 60 * 60 * 24);
 
             window.localStorage.setItem('endTime', String(this.value2));
