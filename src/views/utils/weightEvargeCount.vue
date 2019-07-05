@@ -140,6 +140,8 @@
 
 </script>
 <style lang="scss" module>
+<<<<<<< HEAD
+
     .fl {
         float: left;
     }
@@ -156,4 +158,6 @@
         width: 340px
     }
 
+=======
+>>>>>>> 8feeb34b044f7128069c0626b3b1b5e3c3a512bd
 </style>
