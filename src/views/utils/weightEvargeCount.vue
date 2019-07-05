@@ -89,7 +89,11 @@
             // get date value
             let startTime = new Date(this.startTime);
             let endTime = new Date(this.endTime);
-            let date = (Number(endTime) - Number(startTime)) / (1000 * 60 * 60 * 24);
+            let date = Number(endTime) - Number(startTime);
+            if(date <= 0){
+                this.$message.info('结束时间不能小于等于起始日期');
+            }
+            date = (Number(endTime) - Number(startTime)) / (1000 * 60 * 60 * 24);
 
             // set localStorage
             window.localStorage.setItem('endTime', String(this.endTime));
@@ -136,6 +140,7 @@
 
 </script>
 <style lang="scss" module>
+<<<<<<< HEAD
 
     .fl {
         float: left;
@@ -153,4 +158,6 @@
         width: 340px
     }
 
+=======
+>>>>>>> 8feeb34b044f7128069c0626b3b1b5e3c3a512bd
 </style>
