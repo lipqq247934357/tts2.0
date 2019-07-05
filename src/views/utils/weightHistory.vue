@@ -1,5 +1,5 @@
 <template>
-    <div :class="$style['weight-history']">
+    <div class="" style="float: left; margin-left: 50px; margin-top: 20px;">
         <el-table
                 :data="historyData"
                 style="width: 800px;"
@@ -59,10 +59,5 @@
 </script>
 <style lang="scss" module>
 
-    .weight-history {
-        float: left;
-        margin-left: 50px;
-        margin-top: 20px;
-    }
 
 </style>
