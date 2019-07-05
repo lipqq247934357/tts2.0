@@ -1,40 +1,40 @@
 <template>
     <div class="cotent-margin-adsdfgh">
 
-       <div style="float: left;">
-           <div style="text-align: center; width: 340px;margin-bottom: 24px;">
-               每日减重计算器
-           </div>
+        <div :class="$style['fl']">
+            <div :class="$style['title']">
+                每日减重计算器
+            </div>
 
-           开始时间：
-           <el-date-picker
-                   placeholder="开始日期(默认今天)"
-                   type="date"
-                   v-model="startTime"
-                   value-format="yyyy-MM-dd"
-           >
-           </el-date-picker>
-           <br>
-           <br>
-           结束时间：
-           <el-date-picker
-                   placeholder="结束日期"
-                   type="date"
-                   v-model="endTime"
-                   value-format="yyyy-MM-dd"
-           >
-           </el-date-picker>
-           <br>
-           <br>
-           从多少到多少(斤)：
-           <el-input placeholder="eg:xx-xx" style="width: 162px" v-model="amount"></el-input>
-           <br>
-           <br>
-           <div style="text-align: center;margin-top: 20px; width: 340px;">
-               <el-button @click="getVal">求值</el-button>
-           </div>
+            开始时间：
+            <el-date-picker
+                    placeholder="开始日期(默认今天)"
+                    type="date"
+                    v-model="startTime"
+                    value-format="yyyy-MM-dd"
+            >
+            </el-date-picker>
+            <br>
+            <br>
+            结束时间：
+            <el-date-picker
+                    placeholder="结束日期"
+                    type="date"
+                    v-model="endTime"
+                    value-format="yyyy-MM-dd"
+            >
+            </el-date-picker>
+            <br>
+            <br>
+            从多少到多少(斤)：
+            <el-input placeholder="eg:xx-xx" style="width: 162px" v-model="amount"></el-input>
+            <br>
+            <br>
+            <div :class="$style['get-value']">
+                <el-button @click="getVal">求值</el-button>
+            </div>
 
-       </div>
+        </div>
         <!--  历史记录  -->
         <history :historyData="historyData"></history>
     </div>
@@ -137,5 +137,20 @@
 </script>
 <style lang="scss" module>
 
+    .fl {
+        float: left;
+    }
+
+    .title {
+        text-align: center;
+        width: 340px;
+        margin-bottom: 24px;
+    }
+
+    .get-value {
+        text-align: center;
+        margin-top: 20px;
+        width: 340px
+    }
 
 </style>
