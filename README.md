@@ -39,4 +39,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     "qs"  转换json的工具
     "lodash" js工具库
     "async-validator" 校验输入工具
+    
+    
+    引入 moment插件
 

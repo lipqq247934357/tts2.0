@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
 
-import utils from './utils'
-import user from './user'
-
+import utils from './utils'// 工具方法
+import user from './user'// 用户相关
+import common from './common'
 
 Vue.use(Router)
 
@@ -24,6 +24,7 @@ export default new Router({
             component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
         },
         ...utils,
-        ...user
+        ...user,
+        ...common
     ]
 })
