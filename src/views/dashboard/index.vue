@@ -1,53 +1,26 @@
 <template>
+    <!--todo: 获取router，然后生成树结构，展示需要展示的内容-->
     <div class="cotent-margin-adsdfgh">
-
-        <div>
-            <label>
-                username:
-                <el-input style="width: 200px;" v-model="username"></el-input>
-            </label>
-        </div>
-        <br>
-        <div>
-            <label>
-                password:
-                <el-input style="width: 200px" type="password" v-model="password"></el-input>
-            </label>
-        </div>
-        <br>
-        <div>
-            可选功能：
-            <el-radio label="1" v-model="radio">微信倒计时</el-radio>
-            <el-radio label="2" v-model="radio">修改密码</el-radio>
-        </div>
-        <br>
-        <div>
-            <el-button @click="login">登录</el-button>
-        </div>
+        <!--  生成菜单  -->
+        <routerParse/>
+        <router-link to="/utils/weightEvargeCount">每日减重计算</router-link>
     </div>
+
 </template>
 <script lang="ts">
 
-
     import {Component, Vue} from 'vue-property-decorator';
 
+    import routerParse from '@/components/routeParse/routeParse.vue'
 
     @Component({
-        components: {},
-        watch: {
-            radio: function (newVal: string, oldVal: string) {
-                console.log(newVal, oldVal);
-            }
-        }
+        components: {routerParse}
     })
     export default class login extends Vue {
 
-        username: string = '';
-        password: string = '';
-        radio: string = '';
-
-        login() {
-        }
+        /**
+         * 获取vue-router中的内容，然后遍历内容，然后生成对应的页面
+         */
     }
 
 

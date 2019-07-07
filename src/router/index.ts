@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import utils from './utils'// 工具方法
 import user from './user'// 用户相关
-import common from './common'
+import common from './common' // 通用
 
 Vue.use(Router)
 
