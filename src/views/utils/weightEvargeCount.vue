@@ -91,6 +91,7 @@
         historyData: Array<listInterface> = [];
 
         getVal() {
+            window.dayjs = dayjs;
             if (!this.amount || !this.startTime) {
                 this.$message.info('请输入正确参数!');
                 return;
@@ -119,13 +120,14 @@
                 let val: number = (weight / date) * 500;
                 this.everyAmount = formatNumber(String(val), 2);
             } else {
+                debugger;
                 if (!this.everyAmount) {
                     this.$message.info('请输入每日减重!');
                     return;
                 }
                 date = Math.ceil(weight / Number(this.everyAmount) * 500);
                 let endTime = dayjs(this.startTime);
-                endTime.add(date, 'day');
+                endTime = endTime.add(date, 'day');
                 this.endTime = endTime.toDate();
             }
 

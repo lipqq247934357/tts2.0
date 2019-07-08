@@ -53,3 +53,7 @@ date插件: [dayjs](https://github.com/iamkun/dayjs)
 使用：webpack-bundle-analyzer插件
 npm install --save-dev webpack-bundle-analyzer
 然后查看打包之后的代码大小
+
+2.[element-ui支持在babel中增加配置，然后后编译加载](https://element.eleme.cn/#/zh-CN/component/quickstart)
+
+3.
