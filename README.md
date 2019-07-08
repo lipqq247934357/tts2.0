@@ -40,7 +40,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     "lodash" js工具库
     "async-validator" 校验输入工具
     
-    
+##plugin
 
-todo:
-
+###
+date插件: [moment](https://momentjs.com/docs/)
+###
+工具方法 [lodash](https://github.com/lodash/lodash)
