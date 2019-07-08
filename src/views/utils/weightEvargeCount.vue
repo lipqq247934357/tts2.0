@@ -24,21 +24,22 @@
             <el-radio label="2" v-model="radio">设置每日减重</el-radio>
             <br>
             <br>
-            <div v-if="radio === '1'">
-                结束时间：
-                <el-date-picker
-                        placeholder="结束日期"
-                        type="date"
-                        v-model="endTime"
-                        value-format="yyyy-MM-dd"
-                >
-                </el-date-picker>
-            </div>
-
-            <div v-else>
-                每日减重(g)：
-                <el-input style="width: 201px" v-model="everyAmount"></el-input>
-            </div>
+            <transition-group name="slide-fade-weight-count">
+                <div v-if="radio === '1'" :key="1" :class="$style.tab">
+                    结束时间：
+                    <el-date-picker
+                            placeholder="结束日期"
+                            type="date"
+                            v-model="endTime"
+                            value-format="yyyy-MM-dd"
+                    >
+                    </el-date-picker>
+                </div>
+                <div v-else :key="2" :class="$style.tab">
+                    每日减重(g)：
+                    <el-input style="width: 201px" v-model="everyAmount"></el-input>
+                </div>
+            </transition-group>
             <br>
             <br>
 
@@ -74,7 +75,6 @@
         components: {
             history
         }
-        // todo 切换的时候清空内容
     })
     export default class weightCount extends Vue {
 
@@ -184,10 +184,31 @@
         margin-bottom: 24px;
     }
 
+    .tab {
+        position: absolute;
+        top: 235px;
+    }
+
     .get-value {
         text-align: center;
         margin-top: 20px;
         width: 340px
+
     }
+
+    :global {
+        .slide-fade-weight-count-enter-active {
+            transition: all .35s ease .3s;
+        }
+
+        .slide-fade-weight-count-leave-active {
+            transition: all .25s ease;
+        }
+
+        .slide-fade-weight-count-enter, .slide-fade-weight-count-leave-to {
+            opacity: 0;
+        }
+    }
+
 
 </style>
