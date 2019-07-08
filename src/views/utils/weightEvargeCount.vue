@@ -91,7 +91,6 @@
         historyData: Array<listInterface> = [];
 
         getVal() {
-            window.dayjs = dayjs;
             if (!this.amount || !this.startTime) {
                 this.$message.info('请输入正确参数!');
                 return;
