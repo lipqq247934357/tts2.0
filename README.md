@@ -43,6 +43,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ##plugin
 
 ###
-date插件: [moment](https://momentjs.com/docs/)
+date插件: [dayjs](https://github.com/iamkun/dayjs)
 ###
 工具方法 [lodash](https://github.com/lodash/lodash)
+
+### 
+目前由于文件打包之后内容过大，而且存在源码泄露的风险，所以优化webpack打包
+1.
+使用：webpack-bundle-analyzer插件
+npm install --save-dev webpack-bundle-analyzer
+然后查看打包之后的代码大小
