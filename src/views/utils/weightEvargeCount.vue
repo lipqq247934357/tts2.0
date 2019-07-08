@@ -57,7 +57,7 @@
     import {Component, Vue} from 'vue-property-decorator';
     import history from './weightHistory.vue'
     import {formatNumber} from '@/utils/utils.ts';
-    import moment from 'moment';
+    import dayjs from 'dayjs';
 
 
     interface listInterface {
@@ -124,8 +124,8 @@
                     return;
                 }
                 date = Math.ceil(weight / Number(this.everyAmount) * 500);
-                let endTime = moment(this.startTime);
-                endTime.add(date, 'days');
+                let endTime = dayjs(this.startTime);
+                endTime.add(date, 'day');
                 this.endTime = endTime.toDate();
             }
 
@@ -145,7 +145,7 @@
                 everyAmount: this.everyAmount || ''
             })
 
-            this.$message.info(`到${moment(this.endTime).format("YYYY年MM月D日")},每天需要减重${this.everyAmount}g`)
+            this.$message.info(`到${dayjs(this.endTime).format("YYYY年MM月D日")},每天需要减重${this.everyAmount}g`)
         }
 
 
