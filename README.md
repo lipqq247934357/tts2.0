@@ -55,8 +55,3 @@ npm install --save-dev webpack-bundle-analyzer
 然后查看打包之后的代码大小
 
 2.[element-ui支持在babel中增加配置，然后后编译加载](https://element.eleme.cn/#/zh-CN/component/quickstart)
-
-3.
-
-# twotiger_web
-vue前端项目，独立部署，用于服务各类型终端（PC/TOUCH/APP）
