@@ -9,6 +9,7 @@ function resolve(dir) {
 module.exports = {
     // 选项...
     lintOnSave: false,
+    productionSourceMap: false, // 去掉源码
     chainWebpack: config => {
         if (process.env.NODE_ENV === 'production') {
             config
