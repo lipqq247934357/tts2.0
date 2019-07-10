@@ -4,7 +4,6 @@
         <breadcrumb/>
         <el-dropdown :class="$style['avatar-container']" trigger="click">
             <div :class="$style['avatar-wrapper']">
-                <img :class="$style['user-avatar']" src="/touxiang.jpg">
                 <i class="el-icon-caret-bottom"/>
             </div>
             <el-dropdown-menu class="user-dropdown" slot="dropdown">
