@@ -1,4 +1,4 @@
-import store from '@/store'
+import store from '~/store'
 import {Vue, Component, Watch} from 'vue-property-decorator'
 
 const {body} = document

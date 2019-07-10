@@ -14,11 +14,11 @@
     </el-scrollbar>
 </template>
 
-<script>
+<script lang="ts">
     import {mapGetters} from 'vuex'
-    import variables from '@/styles/variables.scss'
+    import  variables from '~/styles/variables.scss'
     import SidebarItem from './SidebarItem.vue'
-    import {treeUtil} from '@/utils/utils'
+    import {treeUtil} from '~/utils/utils'
 
     export default {
         components: {SidebarItem},
@@ -29,7 +29,8 @@
             variables() {
                 return variables
             },
-            isCollapse(){
+            isCollapse(): any {
+                // @ts-ignore
                 return !this.sidebar.opened
             }
         },
@@ -39,6 +40,7 @@
         created() {
             // TODO 已知bug：一个子节点的时候会出问题，而且一个节点样式展示也有问题
             // this.treeData = (treeUtil(this.tree));
+            // @ts-ignore
             this.treeData = (treeUtil([
                 {
                     "menuId": "100100",

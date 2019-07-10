@@ -2,6 +2,7 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const path = require('path')
+
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
@@ -10,6 +11,12 @@ module.exports = {
     // 选项...
     lintOnSave: false,
     productionSourceMap: false, // 去掉源码
+    configureWebpack: config => {
+        config.resolve.alias = {
+            '~': resolve('src'),
+            '@': resolve('src')
+        }
+    },
     chainWebpack: config => {
         if (process.env.NODE_ENV === 'production') {
             config

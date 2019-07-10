@@ -55,3 +55,10 @@ npm install --save-dev webpack-bundle-analyzer
 然后查看打包之后的代码大小
 
 2.[element-ui支持在babel中增加配置，然后后编译加载](https://element.eleme.cn/#/zh-CN/component/quickstart)
+
+
+3. A Quesition:
+an issue about @ begin for root Dir
+this is [result](https://github.com/palantir/tslint/issues/3364)
+but i use ~ replace @  ,also need update vue.config.js
+4.scss parsed typescript need declare .d.ts file

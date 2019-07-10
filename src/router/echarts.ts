@@ -1,4 +1,4 @@
-import Layout from '@/views/layout/Layout.vue'
+import Layout from '~/views/layout/Layout.vue'
 
 export default [
     {
@@ -10,7 +10,7 @@ export default [
             {
                 path: 'demo1',
                 name: 'demo1',
-                component: () => import('@/views/echarts/demo1.vue')
+                component: () => import('~/views/echarts/demo1.vue')
             }
         ]
     }

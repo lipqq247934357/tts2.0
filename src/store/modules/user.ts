@@ -1,5 +1,5 @@
 import vue from 'vue'
-import {getToken, setToken, removeToken} from '@/utils/auth.ts'
+import {getToken, setToken, removeToken} from '~/utils/auth.ts'
 
 
 const user = {

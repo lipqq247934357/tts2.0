@@ -18,11 +18,11 @@
         <userInfoPop :dialogVisible.sync="dialogVisible"></userInfoPop>
     </div>
 </template>
-<script>
+<script lang="ts">
     import {mapGetters} from 'vuex'
-    import Breadcrumb from '@/components/Breadcrumb'
-    import Hamburger from '@/components/Hamburger'
-    import userInfoPop from './userInfoPop'
+    import Breadcrumb from '~/components/Breadcrumb/index.vue'
+    import Hamburger from '~/components/Hamburger/index.vue'
+    import userInfoPop from './userInfoPop.vue'
 
     export default {
         components: {
@@ -41,17 +41,21 @@
         },
         methods: {
             toggleSideBar() {
+                // @ts-ignore
                 this.$store.dispatch('ToggleSideBar')
             },
             async logout() {
+                // @ts-ignore
                 let data = await this.$api.common.logout()
                 if (data.data.resultCode === '0000') {
+                    // @ts-ignore
                     this.$store.dispatch('LogOut').then(() => {
                         window.location.reload()
                     })
                 }
             },
             userInfoPop() {
+                // @ts-ignore
                 this.dialogVisible = true
             }
         }
