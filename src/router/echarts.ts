@@ -1,8 +1,10 @@
+import Layout from '@/views/layout/index.vue'
+
 export default [
     {
         path: '/echarts',
         name: 'echarts',
-        component: () => import('@/views/echarts/index.vue'),
+        component: Layout,
         children: [
             // 这也是个路由记录
             {

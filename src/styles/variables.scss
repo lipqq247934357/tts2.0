@@ -1,0 +1,26 @@
+//sidebar
+$menuText:#bfcbd9;  // 菜单文字颜色
+$menuActiveText:#409EFF;  // 激活菜单文字颜色
+$subMenuActiveText:#f4f4f5; //https://github.com/ElemeFE/element/issues/12951   当前激活节点的父节点文字颜色
+
+$menuBg:#606266;  // 菜单背景颜色
+$menuHover:#263445;  // 一级节点hover
+
+$subMenuBg:#303133;  //子节点背景颜色
+$subMenuHover:#001528; // 子节点hover
+
+
+$sideBarWidth: 210px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}

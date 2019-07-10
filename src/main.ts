@@ -5,7 +5,7 @@ import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 import ElementUI from 'element-ui'// 引入饿了么
 import 'element-ui/lib/theme-chalk/index.css'// 引入饿了么样式
 
-import './style/index.scss' // 公共css
+import './styles/index.scss' // 公共css
 
 import router from './router' // 路由配置
 import store from './store' // vuex配置
