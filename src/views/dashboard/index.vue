@@ -1,8 +1,6 @@
 <template>
     <!--todo: 获取router，然后生成树结构，展示需要展示的内容-->
     <div class="cotent-margin-adsdfgh">
-        11
-
     </div>
 
 </template>
