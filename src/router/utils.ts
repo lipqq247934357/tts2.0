@@ -8,5 +8,11 @@ export default [
         path: '/utils/copy',
         name: 'copyUtils',
         component: () => import('@/views/utils/copy/index.vue'),
+    },
+    {
+        path: '/utils/qrcode',
+        name: 'qrCodeUtils',
+        component: () => import('@/views/utils/qrcode/index.vue'),
     }
+
 ]

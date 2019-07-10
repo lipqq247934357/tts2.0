@@ -10,6 +10,7 @@
     import {Component, Vue} from 'vue-property-decorator';
     import {formatDate} from '@/utils/utils'
 
+    // @ts-ignore
     import clipboard from '@/directive/clipboard/index.js'
 
 
