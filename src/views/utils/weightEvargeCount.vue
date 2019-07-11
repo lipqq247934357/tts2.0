@@ -57,7 +57,7 @@
 
     import {Component, Vue} from 'vue-property-decorator';
     import history from './weightHistory.vue'
-    import {formatNumber} from '@/utils/utils.ts';
+    import {formatNumber} from '@/utils/utils';
     import dayjs from 'dayjs';
 
 

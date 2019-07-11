@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Layout from '~/views/layout/Layout.vue'
 
 import echarts from './echarts'
-
+import utils from './utils'
 Vue.use(Router)
 
 export default new Router({
@@ -19,6 +19,7 @@ export default new Router({
             }]
         },
         ...echarts,
+        ...utils,
         {path: '/403', component: () => import('~/views/403.vue')},
         {path: '/404', component: () => import('~/views/404.vue')},
         {path: '*', redirect: '/404'}
