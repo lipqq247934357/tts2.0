@@ -41,5 +41,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     "async-validator" 校验输入工具
     
     
-    引入 moment插件
+    
 
