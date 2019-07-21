@@ -13,6 +13,11 @@ export default [
         path: '/utils/qrcode',
         name: 'qrCodeUtils',
         component: () => import('@/views/utils/qrcode/index.vue'),
+    },
+    {
+        path:'/utils/cookbook',
+        name:'cookbook',
+        component:()=>import('@/views/utils/cookbook/index.vue')
     }
 
 ]

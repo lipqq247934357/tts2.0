@@ -62,26 +62,26 @@
                     中午
                 </div>
                 <div>
-                焦耳外卖或者
+                    焦耳外卖或者
                     和番丼饭
                 </div>
                 <div>
-                    星期二
+
                 </div>
                 <div>
-                    星期三
+
                 </div>
                 <div>
-                    星期四
+
                 </div>
                 <div>
-                    星期五
+
                 </div>
                 <div>
-                    星期六
+
                 </div>
                 <div>
-                    星期日
+
                 </div>
             </div>
             <div :class="$style.body">
@@ -89,25 +89,25 @@
                     下午
                 </div>
                 <div>
-                boom外卖
+                    boom外卖
                 </div>
                 <div>
-                    星期二
+
                 </div>
                 <div>
-                    星期三
+
                 </div>
                 <div>
-                    星期四
+
                 </div>
                 <div>
-                    星期五
+
                 </div>
                 <div>
-                    星期六
+
                 </div>
                 <div>
-                    星期日
+
                 </div>
             </div>
             <div :class="$style.body">
@@ -118,34 +118,37 @@
 
                 </div>
                 <div>
-                    星期二
+
                 </div>
                 <div>
-                    星期三
+
                 </div>
                 <div>
-                    星期四
+
                 </div>
                 <div>
-                    星期五
+
                 </div>
                 <div>
-                    星期六
+
                 </div>
                 <div>
-                    星期日
+
                 </div>
             </div>
 
         </div>
 
-
+        <pic style="margin-top: 400px;" ></pic>
     </div>
 </template>
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
+    import pic from './pic.vue';
 
-    @Component({})
+    @Component({
+        components: {pic}
+    })
     export default class cookBook extends Vue {
 
         data: Object = {};

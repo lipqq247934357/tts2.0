@@ -11,6 +11,11 @@ export default [
                 path: 'demo1',
                 name: 'demo1',
                 component: () => import('~/views/echarts/demo1.vue')
+            },
+            {
+                path: 'form',
+                name: 'form',
+                component: () => import('~/views/form/index.vue')
             }
         ]
     }
