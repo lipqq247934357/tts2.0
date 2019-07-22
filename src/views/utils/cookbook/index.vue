@@ -35,8 +35,8 @@
                     早上
                 </div>
                 <div>
-                    全麦面包 2片
-                    脱脂牛奶一瓶
+                    蔬菜包1个
+                    梅干菜包子1个
                 </div>
                 <div>
                     星期二
@@ -62,8 +62,7 @@
                     中午
                 </div>
                 <div>
-                    焦耳外卖或者
-                    和番丼饭
+                    焦耳外卖
                 </div>
                 <div>
 
@@ -113,6 +112,32 @@
             <div :class="$style.body">
                 <div>
                     加餐
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div :class="$style.body">
+                <div>
+                    说明
                 </div>
                 <div>
 
