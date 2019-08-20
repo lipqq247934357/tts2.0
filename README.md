@@ -62,3 +62,5 @@ an issue about @ begin for root Dir
 this is [result](https://github.com/palantir/tslint/issues/3364)
 but i use ~ replace @  ,also need update vue.config.js
 4.scss parsed typescript need declare .d.ts file
+
+next step:卡路里计算器，在吃饭的时候可以统计自己的热量，不一定靠谱，就是玩一玩
