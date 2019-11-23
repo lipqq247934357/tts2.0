@@ -1,3 +1,8 @@
+/**
+ * 对象类型的接口：
+ *
+ */
+
 interface list {
     id: number;
     name: string;

@@ -51,7 +51,7 @@ axios.interceptors.response.use(function (response) {
     } else {
         Message.error({message: '未知错误!', duration: 5 * 1000});
     }
-    return Promise.reject(err);
+    return err;
 });
 
 export const get = (url: string, data = {}) => {
