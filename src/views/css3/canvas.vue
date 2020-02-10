@@ -2,6 +2,9 @@
     <div>
         <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
             您的浏览器不支持 HTML5 canvas 标签。
+            sldkjflajdflskdjalfjfldsj
+            撒大声地
+            dfldksjfldskjfl
         </canvas>
     </div>
 </template>
