@@ -1,6 +1,5 @@
 <template>
     <div class="cotent-margin-adsdfgh">
-
         <div>
             <label>
                 username:
