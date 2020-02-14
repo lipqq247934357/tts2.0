@@ -1,4 +1,4 @@
-<style lang="less">
+<style lang="scss">
 
   * {
     margin: 0;
@@ -28,14 +28,6 @@
 </style>
 
 <template>
-  <!--
-   1.行内元素
-      水平居中 text-align:center;
-      垂直居中 line-height:height
-   2.块级元素
-      1.绝对定位，transform：
-
-   -->
   <div>
     <div id="blo">
       <div></div>
@@ -43,7 +35,6 @@
     <div class="container">
       aaaa
     </div>
-
   </div>
 </template>
 

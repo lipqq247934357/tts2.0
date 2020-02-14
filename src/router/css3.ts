@@ -4,6 +4,7 @@ import flex from '@/views/css3/flex/flex.vue'
 import demo from '@/views/css3/demo/demo.vue'
 import transition from '@/views/css3/transition/transition.vue'
 import desginAlert from '@/views/css3/desginAlert/desginAlert.vue'
+import iconfont from '@/views/css3/iconfont/App.vue'
 
 export default [
     {
@@ -35,5 +36,10 @@ export default [
         path: '/desginAlert',
         name: 'desginAlert',
         component: desginAlert
-    }
+    },
+    {
+        path: '/iconfont',
+        name: 'iconfont',
+        component: iconfont
+    },
 ]

@@ -2,15 +2,20 @@
   * {
     margin: 0;
     padding: 0;
-    font-size: 16px;
   }
+
 </style>
 
 <template>
+  <div>
+    <span class="iconfont">&#xe64a;</span>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
 
-  export default {};
+  import iconfont from './iconfont.css';
+
+  export default {}
 </script>
 

@@ -1,5 +1,4 @@
-<style lang="less">
-
+<style lang="scss">
 
   a.name {
 
@@ -14,7 +13,7 @@
     margin-left: 10px;
     width: 20px;
     height: 20px;
-    background: url('../img/img2.jpg');
+    background: url('../jd/img/img2.jpg');
   }
 
   a:link {

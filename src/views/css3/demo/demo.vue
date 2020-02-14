@@ -1,29 +1,40 @@
 <template>
     <div>
-        <div>
-            <span id="spanTest">1111</span>
-            <span>222</span>
+        <div v-if="type === ''">
+
         </div>
-        <div style="font-size:10px;text-align: center">
-            <input type="text">
+        <div v-else-if="type === 'juzhong'">
+            <juzhong></juzhong>
+        </div>
+        <div v-else-if="type === 'mask'">
+            <maskDemo></maskDemo>
+        </div>
+        <div v-else-if="type === 'weiyuansu'">
+            <weiyuansu></weiyuansu>
         </div>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
 
-    /**
-     * flex的意思是弹性布局,用来为盒装模型提供最大的灵活性
-     *  任何一个元素都可以使用flex布局
-     */
+    import juzhong from '../juzhong/juzhong.vue'; // 居中
+    import maskDemo from '../mask/mask.vue'; // 蒙层
+    import weiyuansu from '../weiyuansu/weiyuansu.vue' // 伪元素
 
     export default {
+        components: {
+            juzhong,
+            maskDemo,
+            weiyuansu
+        },
         data() {
             return {
-                id: undefined
+                id: undefined,
+                type: undefined
             }
         },
         created() {
+            this.type = this.$route.query.type || '';
         },
         mounted() {
         },
@@ -31,9 +42,8 @@
     }
 </script>
 <style lang="scss">
-#spanTest {
-    margin: 10px;
-    padding: 10px;
-}
-
+    #spanTest {
+        margin: 10px;
+        padding: 10px;
+    }
 </style>
