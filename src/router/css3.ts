@@ -2,6 +2,8 @@ import drop from '@/views/css3/drop/drop.vue'
 import canvas from '@/views/css3/canvas/canvas.vue'
 import flex from '@/views/css3/flex/flex.vue'
 import demo from '@/views/css3/demo/demo.vue'
+import transition from '@/views/css3/transition/transition.vue'
+import desginAlert from '@/views/css3/desginAlert/desginAlert.vue'
 
 export default [
     {
@@ -23,5 +25,15 @@ export default [
         path: '/cssDemo',
         name: 'cssDemo',
         component: demo
+    },
+    {
+        path: '/transition',
+        name: 'transition',
+        component: transition
+    },
+    {
+        path: '/desginAlert',
+        name: 'desginAlert',
+        component: desginAlert
     }
 ]
