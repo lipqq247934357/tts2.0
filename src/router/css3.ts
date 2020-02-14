@@ -1,6 +1,7 @@
 import drop from '@/views/css3/drop/drop.vue'
 import canvas from '@/views/css3/canvas/canvas.vue'
 import flex from '@/views/css3/flex/flex.vue'
+import demo from '@/views/css3/demo/demo.vue'
 
 export default [
     {
@@ -18,4 +19,9 @@ export default [
         name: 'flex',
         component: flex
     },
+    {
+        path: '/cssDemo',
+        name: 'cssDemo',
+        component: demo
+    }
 ]

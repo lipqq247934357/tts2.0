@@ -130,7 +130,7 @@
   }
 
   .projectAuth ul li a, .commonProblem ul li a {
-    background: url("./img/rightArrow.png") no-repeat center right;
+    background: url("img/rightArrow.png") no-repeat center right;
     background-size: 0.4rem 0.74rem;
   }
 
@@ -279,7 +279,7 @@
     <!--还款计划-->
     <section v-if="cells[2].selected" class="mt05 pb4">
       <section v-if="list3.repaymentList.length === 0" class="whiteBg noRecord">
-        <img class="db" src="./img/wujilu.png">
+        <img class="db" src="img/wujilu.png">
         <p class="tc">我的天，一个记录都没有？</p>
       </section>
       <section v-else class="whiteBg repaymentPlanCont">
@@ -310,7 +310,7 @@
     <section v-if="cells[3].selected" class="pb4 mt05">
       <template v-if="list4.investList.length==0">
         <section class="whiteBg noRecord">
-          <img class="db" src="./img/wujilu.png">
+          <img class="db" src="img/wujilu.png">
           <p class="tc">我的天，一个记录都没有？</p>
         </section>
       </template>
