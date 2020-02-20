@@ -5,6 +5,7 @@ import utils from './utils'// 工具方法
 import user from './user'// 用户相关
 import common from './common'
 import css3 from './css3'
+import vue from './vue'
 
 Vue.use(Router)
 
@@ -13,6 +14,7 @@ export default new Router({
         ...utils,
         ...user,
         ...common,
-        ...css3
+        ...css3,
+        ...vue
     ]
 })
