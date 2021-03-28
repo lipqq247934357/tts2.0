@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@types/js-cookie": "^2.2.4",
+    "@vue/composition-api": "^1.0.0-rc.5",
     "async-validator": "^1.12.2",
     "axios": "^0.19.0",
     "core-js": "^2.6.10",
@@ -20,7 +21,7 @@
     "nprogress": "^0.2.0",
     "path-to-regexp": "^3.2.0",
     "qs": "^6.9.1",
-    "vue": "^2.6.10",
+    "vue": "2.6.12",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.3.0",
     "vue-router": "^3.1.3",

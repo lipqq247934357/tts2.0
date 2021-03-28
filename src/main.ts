@@ -1,5 +1,7 @@
 import Vue from "vue";
+import VueCompositionAPI from '@vue/composition-api'
 
+Vue.use(VueCompositionAPI)
 import "normalize.css/normalize.css"; // A modern alternative to CSS resets
 
 import ElementUI from "element-ui"; // 引入饿了么
