@@ -1,12 +1,3 @@
-<template>
-  <div>
-    <TodoAdd @addTodo="addTodo"></TodoAdd>
-    <TodoFilter></TodoFilter>
-    <TodoList :todos="todos"></TodoList>
-    <button @click="setNumber">设置数字为5</button>
-    <button @click="getTwice">获取twice</button>
-  </div>
-</template>
 <script>
 import {
   ref,
@@ -55,6 +46,17 @@ export default {
       setNumber,
       getTwice,
     };
+  },
+  render() {
+    return (
+      <div>
+        <TodoAdd addTodo={addTodo}></TodoAdd>
+        <TodoFilter></TodoFilter>
+        <TodoList todos={todos}></TodoList>
+        <button onClick={setNumber}>设置数字为5</button>
+        <button onClick={getTwice}>获取twice</button>
+      </div>
+    );
   },
 };
 </script>
