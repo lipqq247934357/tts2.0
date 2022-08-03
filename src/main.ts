@@ -20,8 +20,30 @@ Vue.prototype.$api = api; // 设置ajax请求在入口处
 
 Vue.config.productionTip = false;
 
-new Vue({
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount("#app");
+let instance:any = null;
+
+const render = (props:any) => {
+  const { container } = props;
+  instance = new Vue({
+    router,
+    render: h => h(App)
+  }).$mount(container ? container.querySelector('#app') : '#app')
+
+}
+if (window.__POWERED_BY_QIANKUN__) {
+  __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
+}
+
+if (!window.__POWERED_BY_QIANKUN__) {
+  render({});
+}
+
+// 导出协议的三个函数
+export async function bootstrap(props) {
+}
+export async function mount(props) {
+  render(props);
+}
+export async function unmount(props) {
+  await instance.$destroy();
+}
