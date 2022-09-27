@@ -1,9 +1,9 @@
 <template>
     <div>
-        <el-input v-model="inputData" placeholder="Please input" style="width:400px;max-width:100%;" />
-        <el-button v-clipboard:copy="inputData" v-clipboard:success="clipboardSuccess" type="primary" icon="document">
+        <a-input v-model="inputData" placeholder="Please input" style="width:400px;max-width:100%;" />
+        <a-button v-clipboard:copy="inputData" v-clipboard:success="clipboardSuccess" type="primary" icon="document">
             copy
-        </el-button>
+        </a-button>
     </div>
 </template>
 <script>

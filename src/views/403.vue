@@ -1,8 +1,8 @@
 <template>
     <div :class="$style['errPage-container']">
-        <el-button :class="$style['pan-back-btn']" @click="back" icon="arrow-left">返回</el-button>
-        <el-row>
-            <el-col :span="12">
+        <a-button :class="$style['pan-back-btn']" @click="back" icon="arrow-left">返回</a-button>
+        <a-row>
+            <a-col :span="12">
                 <h1 :class="$style['text-jumbo']" class="text-ginormous">Oops!</h1>
                 gif来源<a href="https://zh.airbnb.com/" target="_blank">airbnb</a> 页面
                 <h2>你没有权限去该页面</h2>
@@ -15,14 +15,14 @@
                     <li class="link-type"><a href="https://www.taobao.com/">随便看看</a></li>
                     <li><a @click.prevent="dialogVisible=true" href="#">点我看图</a></li>
                 </ul>
-            </el-col>
-            <el-col :span="12">
+            </a-col>
+            <a-col :span="12">
                 <img :src="errGif" alt="Girl has dropped her ice cream." height="428" width="313">
-            </el-col>
-        </el-row>
-        <el-dialog :visible.sync="dialogVisible" title="随便看">
+            </a-col>
+        </a-row>
+        <a-dialog :visible.sync="dialogVisible" title="随便看">
             <img :class="$style['pan-img']" :src="ewizardClap">
-        </el-dialog>
+        </a-dialog>
     </div>
 </template>
 

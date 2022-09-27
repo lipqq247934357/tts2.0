@@ -4,25 +4,25 @@
         <div>
             <label>
                 username:
-                <el-input style="width: 200px;" v-model="username"></el-input>
+                <a-input style="width: 200px;" v-model="username"></a-input>
             </label>
         </div>
         <br>
         <div>
             <label>
                 password:
-                <el-input style="width: 200px" type="password" v-model="password"></el-input>
+                <a-input style="width: 200px" type="password" v-model="password"></a-input>
             </label>
         </div>
         <br>
         <div>
             可选功能：
-            <el-radio label="1" v-model="radio">微信倒计时</el-radio>
-            <el-radio label="2" v-model="radio">修改密码</el-radio>
+            <a-radio label="1" v-model="radio">微信倒计时</a-radio>
+            <a-radio label="2" v-model="radio">修改密码</a-radio>
         </div>
         <br>
         <div>
-            <el-button @click="login">登录</el-button>
+            <a-button @click="login">登录</a-button>
         </div>
     </div>
 </template>

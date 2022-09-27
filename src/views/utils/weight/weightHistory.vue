@@ -1,39 +1,39 @@
 <template>
     <div :class="$style['weight-history']">
-        <el-table
+        <a-table
                 :data="historyData"
                 style="width: 800px;"
         >
-            <el-table-column
+            <a-table-column
                     :formatter="formatDate"
                     label="开始时间"
                     prop="startTime"
             >
-            </el-table-column>
+            </a-table-column>
 
-            <el-table-column
+            <a-table-column
                     :formatter="formatDate"
                     label="结束时间"
                     prop="endTime"
             >
-            </el-table-column>
-            <el-table-column
+            </a-table-column>
+            <a-table-column
                     label="初始重量（斤）"
                     prop="nowWeight">
-            </el-table-column>
-            <el-table-column
+            </a-table-column>
+            <a-table-column
                     label="目标重量（斤）"
                     prop="wantedWeight">
-            </el-table-column>
-            <el-table-column
+            </a-table-column>
+            <a-table-column
                     label="减重（斤）"
                     prop="reduce">
-            </el-table-column>
-            <el-table-column
+            </a-table-column>
+            <a-table-column
                     label="每日减重（g）"
                     prop="everyAmount">
-            </el-table-column>
-        </el-table>
+            </a-table-column>
+        </a-table>
     </div>
 </template>
 <script>

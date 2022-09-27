@@ -2,8 +2,8 @@
     <div>
         <!-- 第一种 -->
         <h1>第一种</h1>
-        <el-button @click="open">window.open下载</el-button>
-        <el-button @click="href">window.href下载</el-button>
+        <a-button @click="open">window.open下载</a-button>
+        <a-button @click="href">window.href下载</a-button>
         <!-- 第二种 -->
         <h1>第二种</h1>
         <!-- https://h-test.aixuexi.com/B:1008:K/1663171200/3a62696602cd4e188ceaa34dfd68d7ff.pdf
@@ -19,7 +19,7 @@
           <a href="https://h-test.aixuexi.com/B:1008:K/1663171200/e9861939f6ee4a989217b4a5a480f20f.zip" download="11.zip">zip  </a>  
           <a href="https://h-test.aixuexi.com/B:1008:K/1663171200/7cbe708d433c40c7b4abfc8d38d14d7c.png" download>png  </a>  
         <h1>第三种</h1>
-        <el-button @click="downloadBlob">window.open下载</el-button>
+        <a-button @click="downloadBlob">window.open下载</a-button>
         <h1>第四种</h1>
         <!-- 参考链接：https://developer.qiniu.com/kodo/1659/download-setting -->
         <span><a href='http://baidu.com/a.pdf?attname=a.pdf'>下载</a></span>

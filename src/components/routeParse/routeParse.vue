@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-menu class="el-menu-demo" default-active="activeIndex" mode="horizontal"></el-menu>
+        <a-menu class="el-menu-demo" default-active="activeIndex" mode="horizontal"></a-menu>
     </div>
 </template>
 

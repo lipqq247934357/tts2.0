@@ -6,45 +6,45 @@
                 每日减重计算器
             </div>
             从多少到多少(斤)：
-            <el-input placeholder="eg:xx-xx" style="width: 162px" v-model="amount"></el-input>
+            <a-input placeholder="eg:xx-xx" style="width: 162px" v-model="amount"></a-input>
             <br>
             <br>
             开始时间：
-            <el-date-picker
+            <a-date-picker
                     placeholder="开始日期(默认今天)"
                     type="date"
                     v-model="startTime"
                     value-format="yyyy-MM-dd"
             >
-            </el-date-picker>
+            </a-date-picker>
             <br>
             <br>
             模式：
-            <el-radio label="1" v-model="radio">设置结束时间</el-radio>
-            <el-radio label="2" v-model="radio">设置每日减重</el-radio>
+            <a-radio label="1" v-model="radio">设置结束时间</a-radio>
+            <a-radio label="2" v-model="radio">设置每日减重</a-radio>
             <br>
             <br>
             <transition-group name="slide-fade-weight-count">
                 <div v-if="radio === '1'" :key="1" :class="$style.tab">
                     结束时间：
-                    <el-date-picker
+                    <a-date-picker
                             placeholder="结束日期"
                             type="date"
                             v-model="endTime"
                             value-format="yyyy-MM-dd"
                     >
-                    </el-date-picker>
+                    </a-date-picker>
                 </div>
                 <div v-else :key="2" :class="$style.tab">
                     每日减重(g)：
-                    <el-input style="width: 201px" v-model="everyAmount"></el-input>
+                    <a-input style="width: 201px" v-model="everyAmount"></a-input>
                 </div>
             </transition-group>
             <br>
             <br>
 
             <div :class="$style['get-value']">
-                <el-button @click="getVal">求值</el-button>
+                <a-button @click="getVal">求值</a-button>
             </div>
 
         </div>
