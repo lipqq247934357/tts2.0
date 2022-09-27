@@ -3,11 +3,11 @@
  * @param {string} timestamp
  * @returns {Date}
  */
-export const parseBigInt = function(timestamp:string) {
+export const parseBigInt = function(timestamp) {
     var t = new Date();
     timestamp += "";
     var aa = "year_4,month_2,day_2,hours_2,minutes_2,seconds_2,microseconds_3";
-    var bb:any = [];
+    var bb = [];
     var s = 0;
     for (var i = 0; i < aa.split(",").length; i++) {
         var tt = aa.split(",")[i].split("_");
@@ -31,7 +31,7 @@ export const parseBigInt = function(timestamp:string) {
  * @returns {any}
  * @constructor
  */
-// export const formatDate = function(fmt:string) { // author: meizz
+// export const formatDate = function(fmt) { // author: meizz
 //     var o = {
 //         "M+" : this.getMonth() + 1, // 月份
 //         "d+" : this.getDate(), // 日
@@ -58,7 +58,7 @@ export const parseBigInt = function(timestamp:string) {
  *| 格式为：1234 5678 9012 3456
  *--------------------------------------------------
  */
-export const formatCardNo = function(value:string) {
+export const formatCardNo = function(value) {
     if (value == "" || value == null || value == undefined) {
         return "";
     }
@@ -85,7 +85,7 @@ export const formatCardNo = function(value:string) {
  * @param num:小写金额
  * @return
  */
-export const upperAmount = function (num:any) {
+export const upperAmount = function (num) {
     let strOutput = "";
     let strUnit = '仟佰拾亿仟佰拾万仟佰拾元角分';
     num += "00";
@@ -108,7 +108,7 @@ export const upperAmount = function (num:any) {
  * @param min:最小值；max:最大值
  * @return
  */
-export const random = function (min:number, max:number) {
+export const random = function (min, max) {
     let c = max - min + 1;
     return Math.floor(Math.random() * c + min);
 }
@@ -123,7 +123,7 @@ export const random = function (min:number, max:number) {
  * @param st:开始时间；et：结束时间
  * @return
  */
-export const getdifMonth = function (st:string, et:string) {
+export const getdifMonth = function (st, et) {
     let m1 = parseInt(st.split("-")[0]) * 12
         + parseInt(st.split("-")[1].replace(/^0+/, ""));
     let m2 = parseInt(et.split("-")[0]) * 12
@@ -138,24 +138,24 @@ export const getdifMonth = function (st:string, et:string) {
  * @param date:日期；days：天数
  * @return
  */
-export const addDate = function (date:string, days:number) {
+export const addDate = function (date, days) {
     let objD = new Date(date);
     objD.setDate(objD.getDate() + days);
 
     let yy = objD.getFullYear();
-    let MM:any = objD.getMonth() + 1;
+    let MM = objD.getMonth() + 1;
     if (MM < 10)
         MM = '0' + MM;
-    let dd:any = objD.getDate();
+    let dd = objD.getDate();
     if (dd < 10)
         dd = '0' + dd;
-    let hh:any = objD.getHours();
+    let hh = objD.getHours();
     if (hh < 10)
         hh = '0' + hh;
-    let mm:any = objD.getMinutes();
+    let mm = objD.getMinutes();
     if (mm < 10)
         mm = '0' + mm;
-    let ss:any = objD.getSeconds();
+    let ss = objD.getSeconds();
     if (ss < 10)
         ss = '0' + ss;
 
@@ -165,7 +165,7 @@ export const addDate = function (date:string, days:number) {
 /**
  * js日期格式化为yyyy-MM-dd
  */
-export const dateFormat = function (d:string) {
+export const dateFormat = function (d) {
     let date = new Date(d);
     let year = date.getFullYear();
     let month = (date.getMonth() + 1).toString();
@@ -182,7 +182,7 @@ export const dateFormat = function (d:string) {
 /**
  * 判断闰年代码
  */
-export const isLeapYear = function (year:number) {
+export const isLeapYear = function (year) {
     if (((year % 4) == 0) && ((year % 100) != 0) || ((year % 400) == 0)) {
         return (true);
     } else {
@@ -193,7 +193,7 @@ export const isLeapYear = function (year:number) {
 /**
  * 格式化数字千分位逗号分割
  */
-export const formatNumberRgx = function (num:string) {
+export const formatNumberRgx = function (num) {
     let parts = num.toString().split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return parts.join(".");
@@ -203,7 +203,7 @@ export const formatNumberRgx = function (num:string) {
  * s  金额
  * n  保留位数
  */
-export const formatNumber = function (s:string, n:number) {
+export const formatNumber = function (s, n) {
     n = n > 0 && n <= 20 ? n : 2;
     s = parseFloat((s + "").replace(/[^\d\\.-]/g, "")).toFixed(n) + "";
     let l = s.split(".")[0].split("").reverse(), r = s.split(".")[1];
@@ -221,7 +221,7 @@ export const formatNumber = function (s:string, n:number) {
  * @param {string} amount
  * @returns {boolean}
  */
-export const validateAmount = function (amount:string) {
+export const validateAmount = function (amount) {
     if (!(/^(?!0+(?:\.0+)?$)(?:[1-9]\d*|0)(?:\.\d{1,2})?$/.test(amount))) {
         return false;
     }

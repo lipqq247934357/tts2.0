@@ -6,18 +6,15 @@
     <router-link to="/utils/weightEvargeCount">每日减重计算</router-link>
   </div>
 </template>
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-
+<script>
 import routerParse from "@/components/routeParse/routeParse.vue";
-
-@Component({
-  components: { routerParse },
-})
-export default class login extends Vue {
   /**
    * 获取vue-router中的内容，然后遍历内容，然后生成对应的页面
    */
+export default {
+  components: {
+    routerParse
+  }
 }
 </script>
 <style lang="scss" module></style>

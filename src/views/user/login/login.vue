@@ -26,29 +26,29 @@
         </div>
     </div>
 </template>
-<script lang="ts">
-
-
-    import {Component, Vue} from 'vue-property-decorator';
-
-
-    @Component({
-        components: {},
-        watch: {
-            radio: function (newVal: string, oldVal: string) {
-                console.log(newVal, oldVal);
-            }
+<script>
+export default {
+    components: {
+    },
+    watch: {
+        radio: function (newVal, oldVal) {
+            console.log(newVal, oldVal);
         }
-    })
-    export default class login extends Vue {
-
-        username: string = '';
-        password: string = '';
-        radio: string = '';
-
+    },
+    data() {
+        return {
+            username: '',
+            password: '',
+            radio: ''
+        }
+    },
+    created() {
+    },
+    methods: {
         login() {
         }
     }
+}
 
 
 </script>

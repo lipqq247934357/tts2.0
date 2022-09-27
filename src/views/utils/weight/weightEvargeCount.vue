@@ -52,45 +52,33 @@
         <history :historyData="historyData"></history>
     </div>
 </template>
-<script lang="ts">
+<script>
+import history from './weightHistory.vue'
+import {formatNumber} from '../../../utils/utils.js';
+import dayjs from 'dayjs';
 
-
-    import {Component, Vue} from 'vue-property-decorator';
-    import history from './weightHistory.vue'
-    import {formatNumber} from '@/utils/utils.ts';
-    import dayjs from 'dayjs';
-
-
-    interface listInterface {
-        key: string,
-        nowWeight: number,
-        wantedWeight: number,
-        reduce: number,
-        startTime: Date,
-        endTime: Date,
-        everyAmount: string
-    }
-
-    @Component({
-        components: {
-            history
-        }
-    })
-    export default class weightCount extends Vue {
-
-        // init data
-        startTime: Date = (function () {
+export default {
+  components: {
+    history
+  },
+  data() {
+    return {
+        startTime: (function () {
             let data = new Date(new Date().toLocaleDateString());
             data.setHours(8, 0, 0, 0);
             return data
-        })();
-        everyAmount: string | undefined = '';
-        endTime: Date | null = window.localStorage.getItem('endTime') ? new Date(String(window.localStorage.getItem('endTime'))) : null; //
-        amount: string | null = window.localStorage.getItem('amount');
-        radio: string = '1';
-        historyData: Array<listInterface> = [];
-
-        getVal() {
+        })(),
+        everyAmount: '',
+        endTime: window.localStorage.getItem('endTime') ? new Date(String(window.localStorage.getItem('endTime'))) : null,
+        amount: window.localStorage.getItem('amount'),
+        radio: '1',
+        historyData: []
+    }
+  },
+  created() {
+  },
+  methods: {
+    getVal() {
             if (!this.amount || !this.startTime) {
                 this.$message.info('请输入正确参数!');
                 return;
@@ -116,7 +104,7 @@
                 endTime = new Date(this.endTime);
                 date = (Number(endTime) - Number(startTime)) / (1000 * 60 * 60 * 24);
                 // calc
-                let val: number = (weight / date) * 500;
+                let val = (weight / date) * 500;
                 this.everyAmount = formatNumber(String(val), 2);
             } else {
                 debugger;
@@ -147,10 +135,8 @@
             })
 
             this.$message.info(`到${dayjs(this.endTime).format("YYYY年MM月D日")},每天需要减重${this.everyAmount}g`)
-        }
-
-
-        pushData(obj: listInterface) {
+        },
+        pushData(obj) {
             obj.key = '' + obj.nowWeight + obj.wantedWeight + obj.reduce + obj.startTime + obj.endTime;
             if (!this.haveKey(obj.key)) {
                 this.historyData.push(obj);
@@ -158,18 +144,16 @@
                     this.historyData.splice(0, 1);
                 }
             }
-        }
-
-        haveKey(key: string) {
+        },
+        haveKey(key) {
             for (let item of this.historyData) {
                 if (item.key === key)
                     return true;
             }
             return false;
         }
-
-    }
-
+  }
+}
 
 </script>
 <style lang="scss" module>

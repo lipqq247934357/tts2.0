@@ -1,4 +1,4 @@
-export const formatNumber = (s: string, n: number) => {
+export const formatNumber = (s, n) => {
     if (s === undefined) return
     n = n > 0 && n <= 20 ? n : 2
     // eslint-disable-next-line no-useless-escape
@@ -10,7 +10,7 @@ export const formatNumber = (s: string, n: number) => {
     }
     return t.split('').reverse().join('') + '.' + r
 }
-export const formatDate = (date: Date) => {
+export const formatDate = (date) => {
     date = new Date(date);
     let year = date.getFullYear();
     let month = (date.getMonth() + 1).toString();

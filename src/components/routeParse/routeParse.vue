@@ -4,26 +4,20 @@
     </div>
 </template>
 
-<script lang="ts">
-    import {Component, Vue} from 'vue-property-decorator';
+<script>
+export default {
+  components: {
+  },
 
-    import router from '@/router';
+  data() {
+    return {}
+  },
+  created() {
+  },
+  methods: {
+  }
+}
 
-    @Component({
-        props: {}
-    })
-
-    export default class routeParse extends Vue {
-
-        data: object = {};
-
-        // todo 创建结构，现在先不做了
-        created() {
-            //@ts-ignore
-            // console.log(router.options.routes);
-        }
-
-    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

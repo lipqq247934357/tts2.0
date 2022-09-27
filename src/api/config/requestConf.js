@@ -2,7 +2,7 @@ import Cookies from 'js-cookie'
 // import store from '../../store';
 import {AxiosRequestConfig} from 'axios';
 
-export const requestConf = function (config: AxiosRequestConfig) {
+export const requestConf = function (config) {
     // config.headers['systemId'] = 's000008'; // 系统id
     config.headers['ticket'] = Cookies.get('token');    // 通过cookie获取token并设置token
     // // 设置 menuId

@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'development') {// 根据不同的环境使用不�
 }
 axios.defaults.headers['Content-Type'] = 'application/json; charset=utf-8';
 
-axios.interceptors.request.use(function (config: AxiosRequestConfig) {
+axios.interceptors.request.use(function (config) {
     if (config.url && config.url.endsWith('/ucenter/service/validate/ticket')) {// 如果走的用户中心，修改地址
         config.baseURL = '';
         config.headers['Content-Type'] = 'text/plain;charset=UTF-8';
@@ -54,11 +54,11 @@ axios.interceptors.response.use(function (response) {
     return Promise.reject(err);
 });
 
-export const get = (url: string, data = {}) => {
+export const get = (url, data = {}) => {
     return axios.get(url, {params: data});
 }
 
 
-export const post = (url: string, data = {}) => {
+export const post = (url, data = {}) => {
     return axios.post(url, data);
 }

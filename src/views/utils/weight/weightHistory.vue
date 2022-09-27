@@ -36,24 +36,27 @@
         </el-table>
     </div>
 </template>
-<script lang="ts">
+<script>
+import {formatDate} from '../../../utils/utils.js'
 
-
-    import {Component, Vue} from 'vue-property-decorator';
-    import {formatDate} from '@/utils/utils'
-
-    @Component({
-        props: {
-            historyData: Array
+export default {
+    components: {
+    },
+    props: {
+        historyData: {
+            type: Array,
+            default: () => []
         }
-    })
-    export default class weightHistory extends Vue {
-        formatDate(x: any, y: any, date: Date) {
+    },
+    data() {
+        return {}
+    },
+    methods: {
+        formatDate(x, y, date) {
             return formatDate(date);
         }
-
-
     }
+}
 
 
 </script>

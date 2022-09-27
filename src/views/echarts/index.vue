@@ -3,15 +3,18 @@
         <router-view/>
     </div>
 </template>
-<script lang="ts">
-
-    import {Component, Vue} from 'vue-property-decorator';
-
-    @Component({
-        components: {}
-    })
-    export default class login extends Vue {
-    }
+<script>
+export default {
+  components: {
+  },
+  data() {
+    return {}
+  },
+  created() {
+  },
+  methods: {
+  }
+}
 
 </script>
 <style lang="scss" module>

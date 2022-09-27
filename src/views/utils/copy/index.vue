@@ -6,25 +6,29 @@
         </el-button>
     </div>
 </template>
-<script lang="ts">
-    import {Component, Vue} from 'vue-property-decorator';
-    import {formatDate} from '@/utils/utils'
+<script>
+import clipboard from '@/directive/clipboard/index.js'
 
-    // @ts-ignore
-    import clipboard from '@/directive/clipboard/index.js'
-
-
-    @Component({
-        props: {
-            historyData: Array
-        },
-        directives:{
-            clipboard
+export default {
+    components: {
+    },
+    props: {
+        tabType: {
+            historyData: Array,
+            default: () => []
         }
-    })
-    export default class weightHistory extends Vue {
-        inputData:string = '';
-
+    },
+    directives: {
+        clipboard
+    },
+    data() {
+        return {
+            inputData: ''
+        }
+    },
+    created() {
+    },
+    methods: {
         clipboardSuccess() {
             this.$message({
                 message: 'Copy successfully',
@@ -33,9 +37,9 @@
             })
         }
     }
-
+}
 
 </script>
-<style lang="scss" module>
+<style lang="scss" >
 
 </style>

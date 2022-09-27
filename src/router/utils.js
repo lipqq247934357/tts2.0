@@ -2,7 +2,7 @@ export default [
     {
         path: '/utils/weightEvargeCount',
         name: 'weightEvargeCount',
-        component: () => import('@/views/utils/weightEvargeCount.vue'),
+        component: () => import('@/views/utils/weight/weightEvargeCount.vue'),
     },
     {
         path: '/utils/copy',

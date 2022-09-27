@@ -20,9 +20,9 @@ Vue.prototype.$api = api; // 设置ajax请求在入口处
 
 Vue.config.productionTip = false;
 
-let instance:any = null;
+let instance = null;
 
-const render = (props:any) => {
+const render = (props) => {
   const { container } = props;
   instance = new Vue({
     router,
