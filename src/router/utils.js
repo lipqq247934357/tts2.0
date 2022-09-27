@@ -13,6 +13,11 @@ export default [
         path: '/utils/qrcode',
         name: 'qrCodeUtils',
         component: () => import('@/views/utils/qrcode/index.vue'),
+    },
+    {
+        path: '/utils/download',
+        name: 'downLoad',
+        component: () => import('@/views/utils/download/index.vue'),
     }
 
 ]
