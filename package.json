@@ -28,10 +28,12 @@
     "qrcode": "^1.4.0",
     "qs": "^6.7.0",
     "regenerator-runtime": "^0.13.9",
+    "test-upload-pag": "^1.0.5",
     "vue": "^2.6.12",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
     "vue-router": "^3.0.7",
+    "vuereact-combined": "^1.2.10",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
