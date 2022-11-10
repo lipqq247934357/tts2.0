@@ -8,37 +8,37 @@ import iconfont from '@/views/css3/iconfont/App.vue'
 
 export default [
     {
-        path: '/drop',
+        path: '/css3/drop',
         name: 'drop',
         component: drop
     },
     {
-        path: '/canvas',
+        path: '/css3/canvas',
         name: 'canvas',
         component: canvas
     },
     {
-        path: '/flex',
+        path: '/css3/flex',
         name: 'flex',
         component: flex
     },
     {
-        path: '/cssDemo',
+        path: '/css3/cssDemo',
         name: 'cssDemo',
         component: demo
     },
     {
-        path: '/transition',
+        path: '/css3/transition',
         name: 'transition',
         component: transition
     },
     {
-        path: '/desginAlert',
+        path: '/css3/desginAlert',
         name: 'desginAlert',
         component: desginAlert
     },
     {
-        path: '/iconfont',
+        path: '/css3/iconfont',
         name: 'iconfont',
         component: iconfont
     },

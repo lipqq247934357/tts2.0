@@ -3,7 +3,7 @@ import insertPop from "@/views/utils/textInsertPop/index.vue";
 export default [
   {
     path: "/insertPop",
-    name: "dashboard",
+    name: "insertPop",
     component: insertPop,
   },
 ];
