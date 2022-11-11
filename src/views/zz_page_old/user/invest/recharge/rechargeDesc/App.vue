@@ -44,13 +44,6 @@
       </thead>
       <tbody>
 
-      <tr v-for="item in data.bank">
-        <td>{{ item.name }}</td>
-        <td>{{ item.orderLimit }}万</td>
-        <td>{{ item.dayLimit }}万</td>
-        <td v-if=" item.isNoCardPay === 0">不需要</td>
-        <td v-else style="color:red;">需要</td>
-      </tr>
       </tbody>
     </table>
     <p style="word-break: break-all; word-wrap: break-word;">

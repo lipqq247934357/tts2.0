@@ -1,20 +1,49 @@
 <template>
-  <!--todo: 获取router，然后生成树结构，展示需要展示的内容-->
-  <div class="cotent-margin-adsdfgh">
-    <!--  生成菜单  -->
-    <routerParse />
-    <router-link to="/utils/weightEvargeCount">每日减重计算</router-link>
+  <div>
+    <div style="width: 300px">
+      <!--  -->
+      <a-button @click="clickSelect" >清除选中（Vue)</a-button>
+      <KnowledgeTreeVue
+        :scrollHeight="300"
+        :subjectProductId="7"
+        @select="onSelect"
+        forwardRef={knowledgeRef}
+        :showReviewModel="0"
+        placeholder="输入名称或ID搜索"
+        :selectNode='["knowledge", "model"]'
+        :needExpandCallBack="false"
+        ref="know-tree"
+      >
+      </KnowledgeTreeVue>
+      <h1 />
+    </div>
   </div>
 </template>
+
 <script>
-import routerParse from "@/components/routeParse/routeParse.vue";
-  /**
-   * 获取vue-router中的内容，然后遍历内容，然后生成对应的页面
-   */
+import { KnowledgeTree } from "test-upload-pag";
+import { applyReactInVue } from 'vuereact-combined'
+
 export default {
   components: {
-    routerParse
-  }
+    // 使用applyReactInVue高阶组件将antd Popover转换成Vue组件
+    KnowledgeTreeVue: applyReactInVue(KnowledgeTree)
+  },
+  methods: {
+    onSelect(selectedKeys, node, { selected }, filterConditions) {
+    // 1.如果选择了某个内容，那么清空其他树的选项
+    console.log(selectedKeys, node, { selected }, filterConditions, 'selectedKeys, node, { selected }, filterConditions');
+    if (selected) {
+      console.log('selected')
+    }
+    const { type } = node;
+    // onSelect(selectedKeys, node, { selected }, filterConditions);
+    },
+    clickSelect() {
+      // reactRef指向react的引用
+      this.$refs['know-tree'].reactRef.reset()
+    }
+  },
 }
 </script>
 <style lang="scss" module></style>
