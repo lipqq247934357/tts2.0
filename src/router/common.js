@@ -1,21 +1,21 @@
 export default [
     {
-        path: '/1',
-        name: 'dashboard1',
+        path: '/',
+        name: 'dashboard',
         component: () => import('@/views/dashboard/index.vue')
     },
     {
-        path: '/2',
+        path: '/a2',
         name: 'dashboard2',
         component: () => import('@/views/dashboard/index2.vue')
     },
     {
-        path: '/3',
+        path: '/a3',
         name: 'dashboard3',
         component: () => import('@/views/dashboard/index3.vue')
     },
     {
-        path: '/4',
+        path: '/a4',
         name: 'dashboard4',
         component: () => import('@/views/dashboard/index4.vue')
     }

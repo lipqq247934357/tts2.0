@@ -70,7 +70,6 @@ export default {
           JSON.stringify(this.allModels.filter((item) => item.id != id))
         )
       }
-      // TODO: 子节点删除
       this.$refs['select-tree'].reactRef.deleteSelected(id)
     }
   }

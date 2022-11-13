@@ -32,7 +32,7 @@ export default {
   methods: {
     onSelect(selectedKeys, node, { selected }, filterConditions) {
     // 1.如果选择了某个内容，那么清空其他树的选项
-    console.log(selectedKeys, node, { selected }, filterConditions, 'selectedKeys, node, { selected }, filterConditions');
+    console.log(selectedKeys, node, { selected }, filterConditions, 'selectedKeys, node, { selected }, filterConditions --- vue');
     if (selected) {
       console.log('selected')
     }
