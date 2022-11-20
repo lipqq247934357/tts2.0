@@ -2,12 +2,11 @@
   <div>
     <div style="width: 300px">
       <!--  -->
-      <a-button @click="clickSelect" >清除选中（Vue)</a-button>
+      <a-button @click="clickSelect" >清除选中（Vue111)</a-button>
       <KnowledgeTreeVue
         :scrollHeight="300"
         :subjectProductId="7"
         @select="onSelect"
-        forwardRef={knowledgeRef}
         :showReviewModel="0"
         placeholder="输入名称或ID搜索"
         :selectNode='["knowledge", "model"]'
