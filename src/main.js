@@ -16,6 +16,10 @@ moment.locale('zh-cn')
 
 import Antd, { message } from 'ant-design-vue'
 
+import infiniteScroll from 'vue-infinite-scroll'
+
+Vue.use(infiniteScroll)
+
 Vue.use(Antd)
 
 Vue.prototype.$api = api; // 设置ajax请求在入口处

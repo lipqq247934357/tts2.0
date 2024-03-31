@@ -18,6 +18,11 @@ export default [
         path: '/utils/download',
         name: 'downLoad',
         component: () => import('@/views/utils/download/index.vue'),
+    },
+    {
+        path: '/utils/infinte-scroll',
+        name: 'downLoad',
+        component: () => import('@/views/utils/infinte-scroll/index.vue'),
     }
 
 ]
